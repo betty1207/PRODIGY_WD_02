@@ -8,7 +8,7 @@
  <div v-if="laps.length" class="  w-full">
    <h2 class="text-xl font-semibold text-center py-3 text-orange-500">Laps</h2>
    <ul class="overflow-y-auto max-h-48 space-y-2  rounded-md ">
-     <li v-for="(lap, index) in laps" :key="index" class="text-sm bg-white bg-opacity-5 px-10 rounded-sm flex justify-between">
+     <li v-for="(lap, index) in laps.slice().reverse()" :key="index" class="text-sm bg-white bg-opacity-5 px-10 rounded-sm flex justify-between">
       {{ laps.length - index }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ lap }}
      </li>
    </ul>
